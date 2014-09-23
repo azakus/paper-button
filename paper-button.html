@@ -48,6 +48,7 @@ To style the background, text and hover color, apply the `background` and
 -->
 
 <link href="../polymer/polymer.html" rel="import">
+<link href="../core-a11y-keys/core-a11y-keys.html" rel="import">
 <link href="../core-icon/core-icon.html" rel="import">
 <link href="../paper-focusable/paper-focusable.html" rel="import">
 <link href="../paper-ripple/paper-ripple.html" rel="import">
@@ -59,6 +60,7 @@ role="button">
   <template>
 
     <link href="paper-button.css" rel="stylesheet">
+    <core-a11y-keys target="{{}}" keys="space enter" on-keys-pressed="{{keyboardTap}}"></core-a11y-keys>
 
     <template if="{{raisedButton}}">
       <div fit id="shadow-container">
@@ -200,6 +202,11 @@ role="button">
       downAction: function(e) {
         this.super(e);
         this.lastEvent = e;
+      },
+
+      keyboardTap: function() {
+        this.fire('click');
+        this.fire('tap');
       },
 
       labelChanged: function() {
