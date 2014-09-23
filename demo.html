@@ -62,6 +62,10 @@ license that can be found in the LICENSE file.
       color: #2a56c6;
     }
 
+    #darker paper-button[focused]::shadow #focusBg {
+      opacity: 0.26;
+    }
+
   </style>
 </head>
 <body unresolved>
@@ -88,6 +92,14 @@ license that can be found in the LICENSE file.
     <!-- <paper-button raisedButton focused label="focused"></paper-button> -->
     <paper-button raisedButton disabled label="disabled" onclick="alert('should not be clickable');"></paper-button>
 
+  </section>
+
+  <section id="darker">
+    <div>26%</div>
+    <paper-button label="flat"></paper-button>
+    <paper-button label="flat colored" class="colored"></paper-button>
+    <paper-button label="raised" raisedButton></paper-button>
+    <paper-button class="colored" label="colored" raisedButton=""></paper-button>
   </section>
 
 </body>
