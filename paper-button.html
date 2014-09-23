@@ -69,7 +69,7 @@ role="button">
     </template>
 
     <div id="clip">
-      <!-- <div id="focusBg"></div> -->
+      <div id="focusBg" fit></div>
       <paper-ripple id="ripple"></paper-ripple>
       <div id="content">
         <template if="{{iconSrc || icon}}">
@@ -184,10 +184,8 @@ role="button">
 
       adjustZ: function() {
         if (this.focused) {
-          this.classList.add('paper-shadow-animate-z-1-z-2');
+          this.z = 2 + 2 * this.active;
         } else {
-          this.classList.remove('paper-shadow-animate-z-1-z-2');
-
           if (this.active) {
             this.z = 2;
           } else if (this.disabled) {

@@ -51,45 +51,18 @@
   overflow: hidden;
 }
 
-/*
 #focusBg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  pointer-events: none;
   opacity: 0;
   border-radius: inherit;
-  background: #c3c3c3;
+  background: #000;
   -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 :host([focused]) #focusBg {
-  -webkit-transition: none;
-  transition: none;
-  -webkit-animation: focus-fade 0.7s infinite alternate;
-  animation: focus-fade 0.7s infinite alternate;
+  opacity: 0.12;
 }
-
-@-webkit-keyframes focus-fade {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes focus-fade {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-*/
 
 #ripple {
   position: absolute;
