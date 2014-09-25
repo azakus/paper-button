@@ -1,0 +1,7 @@
+{
+  "name": "paper-button#gh-pages",
+  "private": true,
+  "dependencies": {
+    "paper-button": "azakus/paper-button#focus"
+  }
+}
